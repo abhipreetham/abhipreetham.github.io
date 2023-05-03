@@ -26,8 +26,7 @@
                     <li class="mx-4"><a href="#">Home</a></li>
                     <li class="mx-4"><a href="./about.html">About</a></li>
                     <li class="mx-4">
-                        <button id="downloadButton"
-                            class=" text-black hover:text-yellow-300 font-bold rounded">
+                        <button id="downloadButton" class=" text-black hover:text-yellow-300 font-bold rounded">
                             Download
                         </button>
                     </li>
@@ -36,17 +35,17 @@
         </div>
     </header>
 
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col items-center justify-center">
-                <img src="icon.png" alt="App Icon" class="w-16 h-16 mb-4" />
-                <h2 class="text-3xl font-bold mb-4 text-black">LittleThings</h2>
-                <p class="text-center text-gray-600 text-xl">
-                    Big things have small beginnings.
-                </p>
+    <div class="hero min-h-screen bg-white">
+        <div class="hero-content text-center text-black">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Small things make Big Difference</h1>
+                <p class="py-6 text-gray-800">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+                    excepturi
+                    exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button id="downloadButtonHero" class="btn bg-black hover:bg-black">Download Now</button>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Tag line section -->
     <section class="bg-gray-100 py-16">
@@ -150,6 +149,7 @@
                             .addEventListener("click", function () {
                                 window.location.href = link;
                             });
+
                     } else {
                         // If on desktop, show modal with QR code
                         var modal = document.createElement("div");
@@ -165,7 +165,7 @@
                         );
                         var modalContent = document.createElement("div");
                         modalContent.classList.add(
-                            "bg-gray-900",
+                            "bg-white",
                             "p-6",
                             "rounded-lg",
                             "text-center"
@@ -180,8 +180,7 @@
                         var closeButton = document.createElement("button");
                         closeButton.innerText = "Done";
                         closeButton.classList.add(
-                            "bg-blue-500",
-                            "hover:bg-blue-700",
+                            "bg-black",
                             "text-white",
                             "font-bold",
                             "py-2",
@@ -198,6 +197,11 @@
                         document.body.appendChild(modal);
                         document
                             .getElementById("downloadButton")
+                            .addEventListener("click", function () {
+                                modal.style.display = "flex";
+                            });
+                        document
+                            .getElementById("downloadButtonHero")
                             .addEventListener("click", function () {
                                 modal.style.display = "flex";
                             });
