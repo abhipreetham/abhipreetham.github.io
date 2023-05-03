@@ -42,7 +42,7 @@
                 <p class="py-6 text-gray-800">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
                     excepturi
                     exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button id="downloadButtonHero" class="btn bg-black hover:bg-black">Download Now</button>
+                <button id="downloadButtonHero" class="btn bg-black hover:bg-black text-white">Download Now</button>
             </div>
         </div>
     </div>
@@ -148,6 +148,11 @@
                             .getElementById("downloadButton")
                             .addEventListener("click", function () {
                                 window.location.href = link;
+                            });
+                        document
+                            .getElementById("downloadButtonHero")
+                            .addEventListener("click", function () {
+                                modal.style.display = "flex";
                             });
 
                     } else {
